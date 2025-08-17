@@ -1,30 +1,26 @@
 # Installation Guide for Home Assistant Green
 
-## Method 1: Local Add-on (Recommended)
+## Method 1: Local Add-on (Recommended for testing)
 
 ### Step 1: Copy Files to Home Assistant
 
-1. **Access your Home Assistant Green** via SSH or file manager
-2. **Create add-on directory**:
+1. **Enable SSH** in Home Assistant (Settings → Add-ons → SSH & Web Terminal)
+2. **Access via SSH** or use the File Editor add-on
+3. **Create add-on directory**:
    ```bash
-   mkdir -p /addons/gpt5-voice-proxy
+   mkdir -p /addons/local
+   mkdir -p /addons/local/gpt5-voice-proxy
    ```
 
-3. **Copy all files** from your PC to `/addons/gpt5-voice-proxy/`:
-   - `config.yaml`
-   - `Dockerfile` 
-   - `server.js`
-   - `package.json`
-   - `test-client.html`
-   - `run.sh`
-   - `DOCS.md`
-   - `CHANGELOG.md`
+4. **Copy all files** from your PC to `/addons/local/gpt5-voice-proxy/`:
+   - Use SCP, SMB share, or File Editor add-on
+   - Copy: `config.yaml`, `Dockerfile`, `server.js`, `package.json`, `test-client.html`, `run.sh`, `DOCS.md`, `CHANGELOG.md`
 
-### Step 2: Install the Add-on
+### Step 2: Install the Local Add-on
 
-1. **Go to Home Assistant** → **Settings** → **Add-ons**
-2. **Click "Add-on Store"** → **⋮ menu** → **"Repositories"**
-3. **Add local repository**: `/addons`
+1. **Go to Home Assistant** → **Settings** → **Add-ons** → **Add-on Store**
+2. **Click ⋮ menu** → **"Check for updates"** or **"Reload"**
+3. **Look for "Local add-ons"** section at the bottom
 4. **Install "GPT-5 Voice Proxy"** from the local add-ons section
 
 ### Step 3: Configure the Add-on
