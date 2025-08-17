@@ -1,0 +1,38 @@
+name: "GPT-5 Voice Proxy"
+description: "Voice assistant proxy for OpenAI GPT-4o Realtime API"
+version: "1.0.0"
+slug: "gpt5-voice-proxy"
+url: "https://github.com/yourusername/gpt5-voice-proxy"
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: auto
+init: false
+hassio_api: true
+hassio_role: default
+homeassistant_api: true
+
+ports:
+  3000/tcp: 3000
+
+ports_description:
+  3000/tcp: "Voice proxy WebSocket server"
+
+options:
+  openai_api_key: ""
+  port: 3000
+  log_level: "info"
+  voice: "alloy"
+
+schema:
+  openai_api_key: str
+  port: int(1000,65535)
+  log_level: list(debug|info|warning|error)
+  voice: list(alloy|echo|fable|onyx|nova|shimmer)
+
+map:
+  - data:rw
+
+services:
+  - mqtt:optional
