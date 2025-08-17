@@ -2,7 +2,7 @@ name: "GPT-4o Voice Proxy"
 description: "Voice assistant proxy for OpenAI GPT-4o Realtime API"
 version: "1.0.0"
 slug: "gpt4o-voice-proxy"
-url: "https://github.com/igloola/gpt4o-voice-proxy"
+url: "https://github.com/igloola/gpt-voice-proxy"
 arch:
   - amd64
   - aarch64
